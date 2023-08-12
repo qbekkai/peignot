@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Peignot";
+  src: url("./../assets/fonts/Peignot.ttf") format("truetype");
+}
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+.card-side-reverse{
+  flex-direction: row-reverse;
+}
+
+.card-side-reverse :where(figure:first-child) {
+  overflow: hidden;
+  border-start-start-radius: unset;
+  border-start-end-radius: inherit;
+  border-end-start-radius: unset;
+  border-end-end-radius: inherit;
+}
+
+
+.card-side-reverse :where(figure:last-child) {
+  overflow: hidden;
+  border-start-start-radius: inherit;
+  border-start-end-radius: unset;
+  border-end-start-radius: inherit;
+  border-end-end-radius: unset;
+}
+
+/* .carousel-vertical {
+  overflow-x: none;
+} */
+
+.h-no-nav-no-foot-m-nav{
+  height: calc(100vh - 36px - 96px);
+  margin: 36px 0 0 0;
+}
+
+.carousel-item{
+  box-sizing: border-box;
+}
+
+.text-100 { font-size: 1rem }
+.text-125 { font-size: 1.25rem }
+.text-150 { font-size: 1.5rem }
+.text-175 { font-size: 1.75rem }
+.text-200 { font-size: 2rem }
+.text-225 { font-size: 2.25rem }
+.text-250 { font-size: 2.5rem }
+.text-275 { font-size: 2.75rem }
+.text-300 { font-size: 3rem }
+.text-325 { font-size: 3.25rem }
+.text-350 { font-size: 3.5rem }
+.text-375 { font-size: 3.75rem }
+.text-400 { font-size: 4rem }
+.text-425 { font-size: 4.25rem }
+.text-450 { font-size: 4.5rem }
+.text-475 { font-size: 4.75rem }
+.text-500 { font-size: 5rem }
+.text-525 { font-size: 5.25rem }
+.text-550 { font-size: 5.5rem }
+.text-575 { font-size: 5.75rem }
+.text-600 { font-size: 6rem }
+.text-625 { font-size: 6.25rem }
+.text-650 { font-size: 6.5rem }
+.text-675 { font-size: 6.75rem }
+.text-700 { font-size: 7rem }
+.text-725 { font-size: 7.25rem }
+.text-750 { font-size: 7.5rem }
+.text-775 { font-size: 7.75rem }
+.text-800 { font-size: 8rem }
+.text-825 { font-size: 8.25rem }
+.text-850 { font-size: 8.5rem }
+.text-875 { font-size: 8.75rem }
+.text-900 { font-size: 9rem }
+.text-925 { font-size: 9.25rem }
+.text-950 { font-size: 9.5rem }
+.text-975 { font-size: 9.75rem }
+.text-1000 { font-size: 10rem }
+
+.leading-100 { line-height: 1rem }
+.leading-125 { line-height: 1.25rem }
+.leading-150 { line-height: 1.5rem }
+.leading-175 { line-height: 1.75rem }
+.leading-200 { line-height: 2rem }
+.leading-225 { line-height: 2.25rem }
+.leading-250 { line-height: 2.5rem }
+.leading-275 { line-height: 2.75rem }
+.leading-300 { line-height: 3rem }
+.leading-325 { line-height: 3.25rem }
+.leading-350 { line-height: 3.5rem }
+.leading-375 { line-height: 3.75rem }
+.leading-400 { line-height: 4rem }
+.leading-425 { line-height: 4.25rem }
+.leading-450 { line-height: 4.5rem }
+.leading-475 { line-height: 4.75rem }
+.leading-500 { line-height: 5rem }
+.leading-525 { line-height: 5.25rem }
+.leading-550 { line-height: 5.5rem }
+.leading-575 { line-height: 5.75rem }
+.leading-600 { line-height: 6rem }
+.leading-625 { line-height: 6.25rem }
+.leading-650 { line-height: 6.5rem }
+.leading-675 { line-height: 6.75rem }
+.leading-700 { line-height: 7rem }
+.leading-725 { line-height: 7.25rem }
+.leading-750 { line-height: 7.5rem }
+.leading-775 { line-height: 7.75rem }
+.leading-800 { line-height: 8rem }
+.leading-825 { line-height: 8.25rem }
+.leading-850 { line-height: 8.5rem }
+.leading-875 { line-height: 8.75rem }
+.leading-900 { line-height: 9rem }
+.leading-925 { line-height: 9.25rem }
+.leading-950 { line-height: 9.5rem }
+.leading-975 { line-height: 9.75rem }
+.leading-1000 { line-height: 10rem }
+
+.range{
+  background-color: rgb(35, 35, 35);
+  height: .3rem;
+  overflow: inherit;
+  border-radius: 1rem;
+  position: relative;
+  padding: 0 .95rem;
+}
+
+.range::-moz-range-thumb {
+  background-color: black;
+  height: 1.5rem;
+  width: .7rem;
+  border-radius: inherit;
+}
+
+.circle{
+  background-color: #000;
+  color: #fff;
+  clip-path: circle(0 at 0 0);
+}

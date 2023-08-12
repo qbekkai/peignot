@@ -1,113 +1,110 @@
-import Image from 'next/image'
+import Card from '@COMPS/Card.component';
+import Main from '@COMPS/MainElement.component';
+import type { Metadata } from 'next';
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+export const metadata: Metadata = {
+	title: 'Planche typographique: Le Peignot | Peignot',
+};
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+export default function LaPresentationPage() {
+	return (
+		<Main>
+			<div className="carousel-item h-full flex flex-col items-center pt-12 font-peignot relative">
+				<h1 className="text-[16rem]">Peignot</h1>
+				<p className="text-[3rem] -mt-24 ml-96 -mr-24">1937 - Cassandre</p>
+				<p className="w-2/3 mt-20 flex flex-col items-center text-center text-3xl">
+					A quitter ses amis pour les plus grandes des vacances. Il leur
+					souhaite agréable fin de terre, escompte leur visite fraternelle
+					(en que sous un bienheureux délai), et se doit de leur redire :{' '}
+					<br />
+					<span className="text-[4rem] mt-7">aimez la typographie</span>
+					<br />
+					<span className="text-[5rem] mt-7">aimez la typo</span> <br />
+					<span className="text-[6rem] mt-7">aimez</span>
+					<br />
+					<span className="text-[2rem] mt-12">~ A. M. Cassandre ~</span>
+				</p>
+			</div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+			<Card
+				title="Le Peignot"
+				content={
+					<>
+						<span className="mb-5">
+							D&apos;inspiration art déco, cette police est célèbre pour
+							le fait qu&apos;elle soit de type biforme,
+							c&apos;est-à-dire qu&apos;elle n&apos;a pas de bas-de-casse
+							au sens traditionnel, mais qu&apos;à la place elle combine
+							des caractères bas-de-casse et de petites capitales
+							modifiées. En effet, elle s&apos;attache à revenir aux
+							origines, lorsque les caractères latins s&apos;écrivaient
+							uniquement en capitales, à l&apos;époque romaine.
+						</span>
+						<span className="mb-5">
+							Cette construction particulière la rend difficilement
+							lisible dans les petits corps, si bien qu&apos;elle est
+							principalement destinée à des énoncés courts et de grande
+							taille, notamment pour l&apos;affichage et la signalétique.
+							Lorsqu&apos;elle est utilisée sur support papier, elle se
+							limite généralement aux titres.
+						</span>
+						<span className="mb-5">
+							La police Peignot a été lancée durant l&apos;Exposition
+							universelle de 1937 à Paris, lorsqu&apos;elle a été choisie
+							par Paul Valéry pour les deux inscriptions qu&apos;il a
+							rédigées dans le but d&apos;orner chacune des deux tours du
+							Palais de Chaillot. Le Peignot a atteint une certaine
+							popularité dans l&apos;affichage et la publicité depuis sa
+							sortie jusqu&apos;à la fin des années 1940, mais son usage
+							a ensuite décliné avec le succès grandissant du style
+							typographique international et ses polices telles
+							qu&apos;Helvetica.
+						</span>
+					</>
+				}
+				image={<img src="/table_glyphe.png" alt="" />}
+			/>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+			<Card
+				hShorter
+				reverse
+				title="L'art-déco"
+				content={
+					<>
+						<span className="mb-5">
+							L&apos;art déco est un courant artistique qui voit le jour
+							dans les années 1910 et qui connait son plein
+							épanouissement au cours des années 20 pour à la fin
+							décliner dans les années 30. Le terme « Art déco » est
+							l&apos;abréviation de « Arts décoratifs » et tire son nom
+							de l&apos;Exposition internationale des Arts décoratifs et
+							industriels modernes qui se tint à Paris en 1925, il touche
+							le monde de l&apos;architecture, plus précisément
+							l&apos;aménagement et la décoration de l&apos;intérieur.
+						</span>
+						<span className="mb-5">
+							L&apos;Art déco possède des caractéristiques qui lui sont
+							propres. Voici quelques-unes de ces principales
+							caractéristiques dans le design graphique :
+							<ul className="pl-10 pt-3">
+								<li>
+									- réapparition de la rigueur et du dépouillement dans
+									les formes
+								</li>
+								<li> - recherche de l&apos;élégance</li>
+								<li> - opposition des courbes et des lignes droites</li>
+								<li>
+									- précision angulaire et contours en décrochements
+								</li>
+								<li> - couleurs vives</li>
+								<li> - exotisme, féminité</li>
+								<li> - tendance au monumentalisme</li>
+							</ul>
+						</span>
+					</>
+				}
+				image={<img src="/art_deco1.jpg" alt="" />}
+			/>
+		</Main>
+	);
 }
