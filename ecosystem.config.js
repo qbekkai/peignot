@@ -7,7 +7,7 @@ module.exports = {
 	deploy: {
 		production: {
 			user: 'qbekkai',
-			host: 'bekkai.fr',
+			host: '176.31.162.67',
 			ref: 'origin/main',
 			repo: 'git@github.com:qbekkai/peignot.git',
 			path: '/home/qbekkai/peignot',
